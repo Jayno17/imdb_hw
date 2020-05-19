@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import FilmTable from "../components/FilmTable";
+import HeaderBox from "../components/HeaderBox";
+import MoreFilms from "../components/MoreFilms";
+import './FilmListBox.css';
 
 class FilmListBox extends Component {
   constructor(props){
@@ -38,8 +41,9 @@ class FilmListBox extends Component {
   render(){
     return (
       <div className="film-list-box">
-      <h2>Films</h2>
+      <HeaderBox title="Upcoming UK Film Releases" />
       <FilmTable film={this.state.film}/>
+      <MoreFilms title="View More Upcoming Releases" />
       </div>
     );
   }
